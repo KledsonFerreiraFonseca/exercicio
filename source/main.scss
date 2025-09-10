@@ -1,0 +1,18 @@
+@use 'config/reset';
+@use 'secao';
+@use  'config/cores';
+@use 'header';
+
+body {
+    background-color: cores.$corDeFundo;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
