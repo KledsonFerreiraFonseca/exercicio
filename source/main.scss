@@ -2,6 +2,9 @@
 @use 'secao';
 @use  'config/cores';
 @use 'header';
+@use 'config/breakpoints';
+
+
 
 body {
     background-color: cores.$corDeFundo;
@@ -15,4 +18,26 @@ li {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: breakpoints.$tablet){
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+
+@media screen and (max-width: breakpoints.$mobile){
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
 }
